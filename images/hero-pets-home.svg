@@ -1,0 +1,59 @@
+<svg width="820" height="620" viewBox="0 0 820 620" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Warm home with pets illustration">
+  <defs>
+    <linearGradient id="bg" x1="95" y1="58" x2="710" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7ED"/>
+      <stop offset="1" stop-color="#ECFDF5"/>
+    </linearGradient>
+    <linearGradient id="sofa" x1="166" y1="265" x2="675" y2="467" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FCD9B8"/>
+      <stop offset="1" stop-color="#FDBA74"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="820" height="620" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#78350F" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect x="38" y="32" width="744" height="556" rx="46" fill="url(#bg)"/>
+  <circle cx="648" cy="142" r="72" fill="#FDE68A" opacity="0.75"/>
+  <circle cx="140" cy="132" r="32" fill="#A7F3D0" opacity="0.85"/>
+  <path d="M110 500C188 452 259 464 325 500C394 538 484 547 560 505C619 472 682 479 742 515" stroke="#F59E0B" stroke-width="8" stroke-linecap="round" opacity="0.25"/>
+  <g filter="url(#shadow)">
+    <rect x="138" y="288" width="544" height="190" rx="42" fill="url(#sofa)"/>
+    <rect x="164" y="246" width="492" height="142" rx="38" fill="#FED7AA"/>
+    <rect x="178" y="304" width="150" height="112" rx="28" fill="#FFF7ED" opacity="0.7"/>
+    <rect x="494" y="304" width="150" height="112" rx="28" fill="#FFF7ED" opacity="0.7"/>
+    <rect x="188" y="442" width="86" height="52" rx="20" fill="#92400E" opacity="0.18"/>
+    <rect x="548" y="442" width="86" height="52" rx="20" fill="#92400E" opacity="0.18"/>
+  </g>
+  <g>
+    <ellipse cx="310" cy="408" rx="75" ry="52" fill="#F8FAFC"/>
+    <circle cx="265" cy="365" r="42" fill="#F8FAFC"/>
+    <circle cx="246" cy="330" r="17" fill="#F8FAFC"/>
+    <circle cx="292" cy="330" r="17" fill="#F8FAFC"/>
+    <circle cx="252" cy="365" r="5" fill="#334155"/>
+    <circle cx="279" cy="365" r="5" fill="#334155"/>
+    <path d="M264 378C270 383 276 383 282 378" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+    <path d="M232 383C209 390 197 406 191 425" stroke="#F8FAFC" stroke-width="16" stroke-linecap="round"/>
+    <path d="M346 402C363 392 382 399 392 418" stroke="#F8FAFC" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <g>
+    <ellipse cx="520" cy="424" rx="72" ry="45" fill="#D97706"/>
+    <circle cx="575" cy="385" r="38" fill="#D97706"/>
+    <circle cx="548" cy="358" r="15" fill="#92400E"/>
+    <circle cx="601" cy="358" r="15" fill="#92400E"/>
+    <circle cx="562" cy="385" r="5" fill="#1F2937"/>
+    <circle cx="586" cy="385" r="5" fill="#1F2937"/>
+    <path d="M573 397C578 402 583 402 588 397" stroke="#1F2937" stroke-width="4" stroke-linecap="round"/>
+    <path d="M468 413C440 390 446 360 467 350" stroke="#D97706" stroke-width="15" stroke-linecap="round"/>
+  </g>
+  <g>
+    <rect x="102" y="164" width="110" height="86" rx="26" fill="white" opacity="0.86"/>
+    <path d="M128 203H184" stroke="#22A699" stroke-width="9" stroke-linecap="round"/>
+    <path d="M145 184V226" stroke="#22A699" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g>
+    <rect x="606" y="212" width="104" height="78" rx="24" fill="white" opacity="0.88"/>
+    <path d="M633 252C651 229 672 229 688 252" stroke="#F97316" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="641" cy="235" r="7" fill="#F97316"/>
+    <circle cx="678" cy="235" r="7" fill="#F97316"/>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MOCH Global Trading logo">
+  <defs>
+    <linearGradient id="g" x1="42" y1="30" x2="200" y2="215" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F59E0B"/>
+      <stop offset="0.55" stop-color="#F97316"/>
+      <stop offset="1" stop-color="#22A699"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="240" height="240" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#78350F" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect x="24" y="24" width="192" height="192" rx="56" fill="url(#g)" filter="url(#shadow)"/>
+  <path d="M62 143V80C62 73 70.7 69.8 75.2 75.2L111.5 118.8L147.8 75.2C152.3 69.8 161 73 161 80V143" stroke="white" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M171 90C185 98 193 111 193 127C193 149 175 167 153 167H94C76 167 61 153 61 135" stroke="white" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="174" cy="84" r="8" fill="white" opacity="0.95"/>
+  <path d="M79 173C84 162 93 156 105 156C117 156 126 162 131 173" stroke="white" stroke-width="9" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="92" cy="143" r="7" fill="white" opacity="0.95"/>
+  <circle cx="119" cy="143" r="7" fill="white" opacity="0.95"/>
+</svg>
