@@ -1,309 +1,151 @@
-const i18n = {
-  en: {
-    "brand.sub": "Pet Goods · Home Living · Global Trade",
-
-    "nav.products": "Products",
-    "nav.business": "Business",
-    "nav.about": "About",
-    "nav.cooperation": "Cooperation",
-    "nav.contact": "Contact",
-
-    "hero.eyebrow": "Warm living for people and pets",
-    "hero.title": "Pet-friendly products and home essentials for everyday comfort.",
-    "hero.desc": "MOCH GLOBAL TRADING LIMITED NZ focuses on pet products and home living goods, connecting reliable suppliers with practical, warm and friendly products for modern households.",
-    "hero.primary": "View Main Categories",
-    "hero.secondary": "Contact Us",
-    "hero.tag1": "Pet Supplies",
-    "hero.tag2": "Home Storage",
-    "hero.tag3": "Daily Living",
-    "hero.float1Title": "Pet-first selection",
-    "hero.float1Text": "Comfort, safety and daily usefulness",
-    "hero.float2Title": "Home living focus",
-    "hero.float2Text": "Simple, practical and friendly",
-
-    "products.kicker": "Current Focus",
-    "products.title": "Main Product Categories",
-    "products.desc": "Our current focus is on pet products and home living items that bring comfort, order and warmth to everyday family life.",
-    "products.pet.title": "Pet Products",
-    "products.pet.desc": "Practical and friendly products for pets and their families, covering daily care, play, travel and home companionship.",
-    "products.pet.li1": "Pet daily accessories",
-    "products.pet.li2": "Comfort and rest items",
-    "products.pet.li3": "Feeding and grooming related products",
-    "products.pet.li4": "Travel and outdoor pet accessories",
-    "products.home.title": "Home Living Goods",
-    "products.home.desc": "Warm, practical and easy-to-use products that help families keep their living spaces tidy, comfortable and pleasant.",
-    "products.home.li1": "Home storage and organisation",
-    "products.home.li2": "Kitchen and daily living items",
-    "products.home.li3": "Bathroom and cleaning accessories",
-    "products.home.li4": "Small home lifestyle products",
-
-    "business.kicker": "What We Do",
-    "business.title": "Business Scope",
-    "business.desc": "We support the full journey from product sourcing and supplier coordination to online sales and fulfilment collaboration.",
-    "business.card1.title": "Pet & Home Product Sourcing",
-    "business.card1.desc": "We focus on sourcing pet and home living products with practical value, reliable quality and suitable market potential.",
-    "business.card2.title": "Supplier Coordination",
-    "business.card2.desc": "We communicate with suppliers, follow up quotations, samples, packaging details, order progress and quality feedback.",
-    "business.card3.title": "E-commerce Operations",
-    "business.card3.desc": "We support product content, listing preparation, platform communication and operational review for online sales channels.",
-    "business.card4.title": "Logistics & Fulfilment Coordination",
-    "business.card4.desc": "We coordinate logistics, fulfilment and after-sales communication to improve the customer experience.",
-    "business.card5.title": "Partner Support",
-    "business.card5.desc": "We work with suppliers, logistics providers, platforms and service partners to build stable trade cooperation.",
-    "business.card6.title": "New Zealand & Overseas Markets",
-    "business.card6.desc": "Based in New Zealand, we explore suitable product opportunities across local and international markets.",
-
-    "about.panelKicker": "Our Belief",
-    "about.panelTitle": "Better everyday living starts with thoughtful products.",
-    "about.panelText": "We believe good products should make daily life easier, warmer and more comfortable for people, families and pets.",
-    "about.kicker": "Who We Are",
-    "about.title": "About Us",
-    "about.p1": "MOCH GLOBAL TRADING LIMITED NZ is a New Zealand-based trading company focused on pet products and home living goods.",
-    "about.p2": "We aim to connect reliable suppliers, practical products and suitable online sales channels, with a focus on quality, communication and long-term cooperation.",
-    "about.p3": "Our current direction is intentionally focused: pet-friendly products and home essentials that fit real daily needs. We welcome suppliers, logistics partners, service providers and business clients who share this practical and friendly approach.",
-
-    "values.kicker": "Our Style",
-    "values.title": "Warm, Practical and Reliable",
-    "values.desc": "We prefer a friendly, transparent and steady way of working with every partner.",
-    "values.card1.title": "Friendly Cooperation",
-    "values.card1.desc": "We build relationships through clear communication, patience and practical problem-solving.",
-    "values.card2.title": "Useful Products",
-    "values.card2.desc": "We care about products that are truly helpful in everyday pet care and home life.",
-    "values.card3.title": "Stable Fulfilment",
-    "values.card3.desc": "We value order follow-up, logistics coordination and consistent execution.",
-    "values.card4.title": "Long-term Growth",
-    "values.card4.desc": "We aim for sustainable cooperation instead of short-term transactions.",
-
-    "coop.kicker": "Partnerships",
-    "coop.title": "Cooperation Opportunities",
-    "coop.desc": "We welcome cooperation related to pet goods, home living products, logistics, platforms and business clients.",
-    "coop.card1.title": "Pet & Home Suppliers",
-    "coop.card1.desc": "Manufacturers and wholesalers with reliable pet or home living products.",
-    "coop.card2.title": "Logistics & Fulfilment",
-    "coop.card2.desc": "Partners who can support stable delivery, fulfilment and customer experience.",
-    "coop.card3.title": "Platforms & Channels",
-    "coop.card3.desc": "Marketplace, channel and service partners for online sales development.",
-    "coop.card4.title": "Business Clients",
-    "coop.card4.desc": "Clients who need sourcing, product coordination or trading support.",
-
-    "contact.kicker": "Contact",
-    "contact.title": "Let’s build something warm and practical together.",
-    "contact.desc": "If you are interested in pet products, home living goods or related cooperation, please leave us a message or send an email directly.",
-    "contact.locationLabel": "Location",
-    "contact.businessLabel": "Main Focus",
-    "contact.businessValue": "Pet products and home living goods",
-
-    "form.title": "Leave us a message",
-    "form.desc": "This GitHub Pages version opens your email client with the message prepared.",
-    "form.name": "Name",
-    "form.email": "Email",
-    "form.company": "Company / Organisation",
-    "form.topic": "Topic",
-    "form.topic1": "Pet product cooperation",
-    "form.topic2": "Home goods cooperation",
-    "form.topic3": "Supplier cooperation",
-    "form.topic4": "Logistics or fulfilment",
-    "form.topic5": "General enquiry",
-    "form.message": "Message",
-    "form.submit": "Submit Message",
-    "form.emailBtn": "Send Email Directly",
-    "form.tip": "Later, this form can be upgraded to Formspree, Netlify Forms or a custom API.",
-
-    "footer.desc": "Focused on warm, practical pet products and home living goods for modern families.",
-    "footer.contactTitle": "Contact",
-    "footer.socialTitle": "Social Links",
-    "footer.focusTitle": "Main Focus",
-    "footer.focus1": "Pet products",
-    "footer.focus2": "Home living goods",
-    "footer.focus3": "Sourcing and trade coordination",
-    "footer.right": "Built for friendly homes, happy pets and long-term partnerships."
-  },
-
+const translations = {
   zh: {
-    "brand.sub": "宠物用品 · 家居生活 · 全球贸易",
-
-    "nav.products": "主营商品",
     "nav.business": "业务范围",
     "nav.about": "关于我们",
+    "nav.values": "我们的价值观",
     "nav.cooperation": "合作",
     "nav.contact": "联系我们",
-
-    "hero.eyebrow": "人与宠物共享的温馨生活",
-    "hero.title": "专注宠物友好产品与实用家居好物。",
-    "hero.desc": "MOCH GLOBAL TRADING LIMITED NZ 目前专注于宠物用品与家居生活类商品，连接可靠供应商与适合现代家庭的实用、温馨、友善产品。",
-    "hero.primary": "查看主营品类",
-    "hero.secondary": "联系我们",
-    "hero.tag1": "宠物用品",
-    "hero.tag2": "家居收纳",
-    "hero.tag3": "日常生活",
-    "hero.float1Title": "宠物友好选品",
-    "hero.float1Text": "关注舒适、安全与日常实用",
-    "hero.float2Title": "家居生活方向",
-    "hero.float2Text": "简单、实用、温暖友善",
-
-    "products.kicker": "当前主营",
-    "products.title": "主营商品品类",
-    "products.desc": "我们当前重点聚焦宠物用品与家居生活商品，为日常家庭生活带来舒适、整洁与温暖。",
-    "products.pet.title": "宠物用品",
-    "products.pet.desc": "面向宠物与养宠家庭的实用友好商品，覆盖日常护理、陪伴互动、出行与居家场景。",
-    "products.pet.li1": "宠物日常配件",
-    "products.pet.li2": "舒适休息类用品",
-    "products.pet.li3": "喂食与清洁护理相关产品",
-    "products.pet.li4": "出行与户外宠物配件",
-    "products.home.title": "家居生活商品",
-    "products.home.desc": "温馨、实用、易使用的家居商品，帮助家庭空间更整洁、舒适和有秩序。",
-    "products.home.li1": "家居收纳与整理",
-    "products.home.li2": "厨房与日常生活用品",
-    "products.home.li3": "浴室与清洁配件",
-    "products.home.li4": "小型生活方式家居产品",
-
-    "business.kicker": "我们做什么",
+    "hero.eyebrow": "新西兰公司 · 在线贸易 · 全球连接",
+    "hero.title": "立足新西兰，连接优质商品与在线市场。",
+    "hero.desc": "MOCH GLOBAL TRADE LIMITED 是一家位于新西兰奥克兰的在线贸易公司，专注于 3C 电子配件、宠物用品与家居生活类商品，致力于以公平、互信和多元化的合作方式服务客户与合作伙伴。",
+    "hero.cta1": "联系合作",
+    "hero.cta2": "了解业务",
+    "focus.title": "我们关注的方向",
+    "focus.item1": "3C 电子配件的在线销售与产品协作",
+    "focus.item2": "宠物用品与人与宠物友好生活方式商品",
+    "focus.item3": "家居生活类商品的线上渠道拓展",
+    "focus.item4": "以新西兰公司为基础的长期贸易合作",
     "business.title": "业务范围",
-    "business.desc": "我们支持从商品采购、供应商协调，到线上销售、物流履约协同的完整业务链路。",
-    "business.card1.title": "宠物与家居商品采购",
-    "business.card1.desc": "我们聚焦具有实用价值、可靠质量和市场潜力的宠物用品与家居生活商品。",
-    "business.card2.title": "供应商协调",
-    "business.card2.desc": "我们协助供应商沟通、报价跟进、样品确认、包装细节、订单进度和质量反馈。",
-    "business.card3.title": "电商运营支持",
-    "business.card3.desc": "我们支持商品内容、上架准备、平台沟通和线上销售渠道的运营复盘。",
-    "business.card4.title": "物流与履约协调",
-    "business.card4.desc": "我们协调物流、履约与售后沟通，提升整体客户体验。",
-    "business.card5.title": "合作伙伴支持",
-    "business.card5.desc": "我们与供应商、物流服务商、平台和服务伙伴协作，建立稳定的贸易合作。",
-    "business.card6.title": "新西兰与海外市场",
-    "business.card6.desc": "我们立足新西兰，探索适合本地与国际市场的商品机会。",
-
-    "about.panelKicker": "我们的相信",
-    "about.panelTitle": "更好的日常生活，来自用心选择的商品。",
-    "about.panelText": "我们相信，好的商品应该让人、家庭与宠物的日常生活更轻松、更温暖、更舒适。",
-    "about.kicker": "我们是谁",
-    "about.title": "关于我们",
-    "about.p1": "MOCH GLOBAL TRADING LIMITED NZ 是一家位于新西兰的贸易公司，目前专注于宠物用品与家居生活类商品。",
-    "about.p2": "我们希望连接可靠供应商、实用商品与合适的线上销售渠道，并重视品质、沟通和长期合作。",
-    "about.p3": "我们当前方向非常明确：围绕宠物友好产品与真实家庭日常需求中的家居好物。我们欢迎理念务实友善的供应商、物流伙伴、服务商和企业客户与我们合作。",
-
-    "values.kicker": "我们的风格",
-    "values.title": "温馨、实用、可靠",
-    "values.desc": "我们希望用友善、透明和稳健的方式，与每一位伙伴合作。",
-    "values.card1.title": "友善合作",
-    "values.card1.desc": "通过清晰沟通、耐心协作和务实解决问题，建立长期关系。",
-    "values.card2.title": "商品实用",
-    "values.card2.desc": "我们关注真正能改善宠物照护与家庭生活的实用商品。",
-    "values.card3.title": "稳定履约",
-    "values.card3.desc": "我们重视订单跟进、物流协调和稳定执行。",
-    "values.card4.title": "长期成长",
-    "values.card4.desc": "我们追求可持续合作，而不是短期交易。",
-
-    "coop.kicker": "合作伙伴",
-    "coop.title": "合作机会",
-    "coop.desc": "我们欢迎与宠物用品、家居生活商品、物流、平台及企业客户相关的合作。",
-    "coop.card1.title": "宠物与家居供应商",
-    "coop.card1.desc": "拥有可靠宠物用品或家居生活商品的生产商与批发商。",
-    "coop.card2.title": "物流与履约",
-    "coop.card2.desc": "能够支持稳定交付、履约和客户体验的合作伙伴。",
-    "coop.card3.title": "平台与渠道",
-    "coop.card3.desc": "支持线上销售发展的平台、渠道和服务合作伙伴。",
-    "coop.card4.title": "企业客户",
-    "coop.card4.desc": "需要采购、商品协调或贸易支持的企业客户。",
-
-    "contact.kicker": "联系合作",
-    "contact.title": "一起做温暖、实用、可靠的商品合作。",
-    "contact.desc": "如果你对宠物用品、家居生活商品或相关合作感兴趣，欢迎留言或直接发送邮件联系我们。",
-    "contact.locationLabel": "所在地",
-    "contact.businessLabel": "主营方向",
-    "contact.businessValue": "宠物用品与家居生活商品",
-
-    "form.title": "给我们留言",
-    "form.desc": "当前 GitHub Pages 版本会打开你的邮箱客户端，并自动带入留言内容。",
-    "form.name": "姓名",
-    "form.email": "邮箱",
-    "form.company": "公司 / 机构",
-    "form.topic": "主题",
-    "form.topic1": "宠物用品合作",
-    "form.topic2": "家居商品合作",
-    "form.topic3": "供应商合作",
-    "form.topic4": "物流或履约合作",
-    "form.topic5": "一般咨询",
-    "form.message": "留言内容",
-    "form.submit": "提交留言",
-    "form.emailBtn": "直接发邮件",
-    "form.tip": "后续可以升级接入 Formspree、Netlify Forms 或自建 API。",
-
-    "footer.desc": "专注为现代家庭提供温馨、实用的宠物用品与家居生活商品。",
-    "footer.contactTitle": "联系信息",
-    "footer.socialTitle": "社交账号",
-    "footer.focusTitle": "主营方向",
-    "footer.focus1": "宠物用品",
-    "footer.focus2": "家居生活商品",
-    "footer.focus3": "采购与贸易协调",
-    "footer.right": "为友善家庭、快乐宠物与长期合作而构建。"
+    "business.subtitle": "Business Scope",
+    "business.card1.title": "3C 电子配件",
+    "business.card1.desc": "关注手机、电脑及智能设备相关配件，围绕实用性、设计感和线上消费需求进行商品布局。",
+    "business.card2.title": "宠物用品",
+    "business.card2.desc": "关注宠物日常护理、互动、收纳及友好生活方式用品，重视人与宠物的舒适相处体验。",
+    "business.card3.title": "家居生活商品",
+    "business.card3.desc": "关注家居收纳、生活便利、装饰与日常使用场景，为线上消费者提供实用且友好的选择。",
+    "about.panelTitle": "关于我们",
+    "about.statement": "一家立足新西兰奥克兰的在线贸易公司。",
+    "about.panelDesc": "我们相信，稳定、尊重和互信的合作关系，是公司长期发展的基础。",
+    "about.p1": "MOCH GLOBAL TRADE LIMITED 位于新西兰奥克兰，专注于通过在线业务连接优质商品、供应伙伴与目标市场。",
+    "about.p2": "我们的当前主营方向包括 3C 电子配件、宠物用品和家居生活商品。我们重视商品的实用价值、用户体验和长期稳定的合作关系。",
+    "about.p3": "作为新西兰公司，我们希望以清晰、可靠和尊重多元文化的方式，与供应商、服务伙伴和客户建立持续合作。",
+    "values.title": "我们的价值观",
+    "values.card1.title": "公平",
+    "values.card1.desc": "我们以公平的态度对待每一位客户与合作伙伴，重视清晰和合理的合作规则。",
+    "values.card2.title": "互信",
+    "values.card2.desc": "我们相信长期合作来自互相信任、真实沟通和稳定执行。",
+    "values.card3.title": "多元化",
+    "values.card3.desc": "我们尊重不同市场、文化、想法和合作方式，欢迎多元背景的伙伴。",
+    "values.card4.title": "相互尊重",
+    "values.card4.desc": "我们以尊重作为合作基础，重视坦诚、礼貌和专业的沟通方式。",
+    "coop.title": "合作方向",
+    "coop.card1.title": "供应商合作",
+    "coop.card1.desc": "欢迎 3C 电子配件、宠物用品与家居类商品供应商建立长期合作。",
+    "coop.card2.title": "服务伙伴合作",
+    "coop.card2.desc": "欢迎产品、设计、运营、物流及相关服务伙伴与我们沟通合作机会。",
+    "coop.card3.title": "线上渠道合作",
+    "coop.card3.desc": "共同探索适合线上消费者的商品、内容和渠道合作方式。",
+    "coop.card4.title": "企业客户合作",
+    "coop.card4.desc": "为有采购、商品合作或在线业务需求的企业客户提供沟通与支持。",
+    "contact.title": "联系我们",
+    "contact.desc": "如果你是供应商、服务伙伴、线上渠道方或企业客户，欢迎与我们联系。",
+    "contact.emailBtn": "发送邮件",
+    "contact.locationLabel": "地址",
+    "contact.locationValue": "新西兰奥克兰",
+    "contact.businessLabel": "业务",
+    "contact.businessValue": "3C 电子配件、宠物用品、家居生活商品在线业务",
+    "footer.desc": "一家立足新西兰的在线贸易公司，主营 3C 电子配件、宠物用品与家居生活商品。",
+    "footer.social": "社交账号",
+    "footer.contact": "联系信息",
+    "footer.address": "新西兰奥克兰",
+    "footer.right": "以公平、互信、多元化与相互尊重为基础。"
+  },
+  en: {
+    "nav.business": "Business",
+    "nav.about": "About",
+    "nav.values": "Values",
+    "nav.cooperation": "Cooperation",
+    "nav.contact": "Contact",
+    "hero.eyebrow": "New Zealand Based · Online Trade · Global Connections",
+    "hero.title": "A New Zealand company connecting quality products with online markets.",
+    "hero.desc": "MOCH GLOBAL TRADE LIMITED is an Auckland, New Zealand based online trade company focused on 3C electronic accessories, pet products and home products. We serve customers and partners through fair, trusted and diverse cooperation.",
+    "hero.cta1": "Contact Us",
+    "hero.cta2": "Explore Business",
+    "focus.title": "Our Focus Areas",
+    "focus.item1": "Online business for 3C electronic accessories",
+    "focus.item2": "Pet products and pet-friendly lifestyle goods",
+    "focus.item3": "Online channel development for home products",
+    "focus.item4": "Long-term trade cooperation based in New Zealand",
+    "business.title": "Business Scope",
+    "business.subtitle": "Main Categories",
+    "business.card1.title": "3C Electronic Accessories",
+    "business.card1.desc": "We focus on accessories for mobile phones, computers and smart devices, with attention to practicality, design and online consumer needs.",
+    "business.card2.title": "Pet Products",
+    "business.card2.desc": "We focus on pet care, interaction, storage and friendly lifestyle products that support harmony between people and pets.",
+    "business.card3.title": "Home Products",
+    "business.card3.desc": "We focus on home storage, daily convenience, decor and practical household products for online consumers.",
+    "about.panelTitle": "About Us",
+    "about.statement": "An Auckland, New Zealand based online trade company.",
+    "about.panelDesc": "We believe stable, respectful and trusted cooperation is the foundation of long-term company growth.",
+    "about.p1": "MOCH GLOBAL TRADE LIMITED is based in Auckland, New Zealand, and focuses on connecting quality products, supply partners and target markets through online business.",
+    "about.p2": "Our current main categories include 3C electronic accessories, pet products and home products. We value practical product benefits, user experience and stable long-term cooperation.",
+    "about.p3": "As a New Zealand company, we aim to build ongoing partnerships with suppliers, service partners and customers through clear, reliable and culturally respectful communication.",
+    "values.title": "Our Values",
+    "values.card1.title": "Fairness",
+    "values.card1.desc": "We treat customers and partners fairly and value clear, reasonable cooperation rules.",
+    "values.card2.title": "Mutual Trust",
+    "values.card2.desc": "We believe long-term cooperation comes from trust, honest communication and stable execution.",
+    "values.card3.title": "Diversity",
+    "values.card3.desc": "We respect different markets, cultures, ideas and ways of working, and welcome partners from diverse backgrounds.",
+    "values.card4.title": "Mutual Respect",
+    "values.card4.desc": "Respect is the foundation of cooperation. We value sincere, polite and professional communication.",
+    "coop.title": "Cooperation",
+    "coop.card1.title": "Supplier Cooperation",
+    "coop.card1.desc": "We welcome long-term cooperation with suppliers of 3C accessories, pet products and home products.",
+    "coop.card2.title": "Service Partner Cooperation",
+    "coop.card2.desc": "We welcome product, design, operation, logistics and related service partners to discuss opportunities.",
+    "coop.card3.title": "Online Channel Cooperation",
+    "coop.card3.desc": "We explore product, content and channel cooperation suitable for online consumers.",
+    "coop.card4.title": "Business Client Cooperation",
+    "coop.card4.desc": "We provide communication and support for business clients with sourcing, product cooperation or online business needs.",
+    "contact.title": "Contact Us",
+    "contact.desc": "If you are a supplier, service partner, online channel partner or business client, please feel free to contact us.",
+    "contact.emailBtn": "Send Email",
+    "contact.locationLabel": "Address",
+    "contact.locationValue": "Auckland, New Zealand",
+    "contact.businessLabel": "Business",
+    "contact.businessValue": "Online business for 3C electronic accessories, pet products and home products",
+    "footer.desc": "A New Zealand based online trade company focused on 3C electronic accessories, pet products and home products.",
+    "footer.social": "Social Accounts",
+    "footer.contact": "Contact Info",
+    "footer.address": "Auckland, New Zealand",
+    "footer.right": "Built on fairness, mutual trust, diversity and respect."
   }
 };
 
 const html = document.documentElement;
 const zhButton = document.getElementById("langZh");
 const enButton = document.getElementById("langEn");
-const messageForm = document.getElementById("messageForm");
-const contactEmail = "contact@mochglobaltrading.co.nz";
 
 function detectLanguage() {
   const saved = localStorage.getItem("siteLanguage");
   if (saved === "zh" || saved === "en") return saved;
-
   const browserLanguage = (navigator.language || "").toLowerCase();
   return browserLanguage.startsWith("zh") ? "zh" : "en";
 }
 
-function applyLanguage(language) {
-  const dictionary = i18n[language];
-
-  html.setAttribute("lang", language === "zh" ? "zh-CN" : "en");
-  document.title = language === "zh"
-    ? "MOCH GLOBAL TRADING LIMITED NZ | 宠物与家居商品"
-    : "MOCH GLOBAL TRADING LIMITED NZ | Pet & Home Goods";
-
-  document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const key = element.getAttribute("data-i18n");
-    if (dictionary[key]) {
-      element.textContent = dictionary[key];
-    }
+function setLanguage(lang) {
+  html.setAttribute("lang", lang === "zh" ? "zh-CN" : "en");
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) el.textContent = translations[lang][key];
   });
-
-  zhButton.classList.toggle("active", language === "zh");
-  enButton.classList.toggle("active", language === "en");
-  localStorage.setItem("siteLanguage", language);
+  zhButton.classList.toggle("active", lang === "zh");
+  enButton.classList.toggle("active", lang === "en");
+  localStorage.setItem("siteLanguage", lang);
+  document.title = lang === "zh" ? "MOCH GLOBAL TRADE LIMITED | 公司主页" : "MOCH GLOBAL TRADE LIMITED | Company Homepage";
 }
 
-zhButton.addEventListener("click", () => applyLanguage("zh"));
-enButton.addEventListener("click", () => applyLanguage("en"));
-
-applyLanguage(detectLanguage());
-
-messageForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const lang = html.getAttribute("lang") === "zh-CN" ? "zh" : "en";
-  const formData = new FormData(messageForm);
-  const name = (formData.get("name") || "").trim();
-  const email = (formData.get("email") || "").trim();
-  const company = (formData.get("company") || "").trim();
-  const topicSelect = document.getElementById("topic");
-  const topic = topicSelect.selectedOptions[0].textContent.trim();
-  const message = (formData.get("message") || "").trim();
-
-  const subject = lang === "zh"
-    ? `网站留言 - ${topic}`
-    : `Website Enquiry - ${topic}`;
-
-  const body = [
-    `Name: ${name}`,
-    `Email: ${email}`,
-    `Company / Organisation: ${company}`,
-    `Topic: ${topic}`,
-    "",
-    "Message:",
-    message
-  ].join("\n");
-
-  window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-});
+zhButton.addEventListener("click", () => setLanguage("zh"));
+enButton.addEventListener("click", () => setLanguage("en"));
+setLanguage(detectLanguage());
