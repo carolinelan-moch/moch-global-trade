@@ -1,21 +1,18 @@
-## MOCH GLOBAL TRADE LIMITED Homepage
+# MOCH GLOBAL TRADE LIMITED Homepage
 
-Static GitHub Pages homepage.
+Static GitHub Pages project.
 
 ## Structure
 
-- index.html
-- style.css
-- app.js
-- images/
+- `index.html`
+- `style.css`
+- `app.js`
+- `images/`
 
-## GitHub Pages URL
+## Deploy
 
-After deployment, visit:
+Upload all files to the root of your GitHub repository and enable GitHub Pages from `main / root`.
 
-https://carolinelan-moch.github.io/moch-global-trade/
+## Notes
 
-## Replace later
-
-- contact@mochglobaltrade.co.nz
-- footer social media links
+The contact form uses `mailto:` and opens the visitor's email client. Replace social media `#` links in `index.html` footer with real account URLs.

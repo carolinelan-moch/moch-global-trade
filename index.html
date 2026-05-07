@@ -3,225 +3,201 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MOCH GLOBAL TRADE LIMITED | Company Homepage</title>
-  <meta name="description" content="MOCH GLOBAL TRADE LIMITED is a New Zealand based online trade company focused on 3C electronic accessories, pet products and home products." />
+  <title>MOCH GLOBAL TRADE LIMITED | Home</title>
+  <meta name="description" content="MOCH GLOBAL TRADE LIMITED is a New Zealand based online trading company for 3C electronic accessories, pet products and home living products." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="container nav">
-      <a href="#top" class="brand" aria-label="MOCH GLOBAL TRADE LIMITED homepage">
-        <img src="images/logo.svg" alt="MOCH GLOBAL TRADE LIMITED logo" class="brand-logo" />
-        <span class="brand-text">MOCH GLOBAL TRADE LIMITED</span>
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="MOCH GLOBAL TRADE LIMITED home">
+        <img src="images/logo.svg" alt="MOCH logo" class="brand-logo" />
+        <span class="brand-name">MOCH GLOBAL TRADE</span>
       </a>
-
-      <nav class="nav-links" aria-label="Main navigation">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
         <a href="#business" data-i18n="nav.business">业务范围</a>
         <a href="#about" data-i18n="nav.about">关于我们</a>
         <a href="#values" data-i18n="nav.values">我们的价值观</a>
         <a href="#cooperation" data-i18n="nav.cooperation">合作</a>
         <a href="#contact" data-i18n="nav.contact">联系我们</a>
+        <div class="lang-switch">
+          <button type="button" id="langZh" class="active">中文</button>
+          <button type="button" id="langEn">EN</button>
+        </div>
       </nav>
-
-      <div class="lang-switch" aria-label="Language switcher">
-        <button type="button" id="langZh">中文</button>
-        <button type="button" id="langEn">EN</button>
-      </div>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow" data-i18n="hero.eyebrow">New Zealand Based · Online Trade · Global Connections</div>
-          <h1 data-i18n="hero.title">立足新西兰，连接优质商品与在线市场。</h1>
-          <p data-i18n="hero.desc">
-            MOCH GLOBAL TRADE LIMITED 是一家位于新西兰奥克兰的在线贸易公司，专注于 3C 电子配件、宠物用品与家居生活类商品，致力于以公平、互信和多元化的合作方式服务客户与合作伙伴。
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#contact" data-i18n="hero.cta1">联系合作</a>
-            <a class="button button-secondary" href="#business" data-i18n="hero.cta2">了解业务</a>
+    <section class="hero-section" aria-label="Company highlights carousel">
+      <button class="carousel-arrow carousel-prev" id="prevSlide" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="left">
+          <path d="M15 18L9 12L15 6" />
+        </svg>
+      </button>
+      <div class="container hero-inner">
+        <div class="hero-card" id="heroCard">
+          <span class="eyebrow" data-i18n="hero.eyebrow">立足新西兰</span>
+          <h1 id="heroTitle">立足新西兰，服务全球客户</h1>
+          <p id="heroDesc">我们是一家立足新西兰的在线贸易公司，专注于 3C 电子配件、宠物用品、家居用品的在线业务，为全球客户提供优质产品与服务。</p>
+          <div class="hero-meta">
+            <span>⌖ <b id="heroMeta1">新西兰奥克兰</b></span>
+            <span>♡ <b id="heroMeta2">值得信赖的合作伙伴</b></span>
           </div>
+          <div class="carousel-dots" id="carouselDots" aria-label="Carousel pagination"></div>
         </div>
-
-        <aside class="hero-card" aria-label="Business focus">
-          <div class="hero-card-icon">◎</div>
-          <h3 data-i18n="focus.title">我们关注的方向</h3>
-          <div class="accent-line"></div>
-          <div class="scope-list">
-            <div class="scope-item"><span class="check">✓</span><span data-i18n="focus.item1">3C 电子配件的在线销售与产品协作</span></div>
-            <div class="scope-item"><span class="check">✓</span><span data-i18n="focus.item2">宠物用品与人与宠物友好生活方式商品</span></div>
-            <div class="scope-item"><span class="check">✓</span><span data-i18n="focus.item3">家居生活类商品的线上渠道拓展</span></div>
-            <div class="scope-item"><span class="check">✓</span><span data-i18n="focus.item4">以新西兰公司为基础的长期贸易合作</span></div>
-          </div>
-        </aside>
       </div>
+      <button class="carousel-arrow carousel-next" id="nextSlide" aria-label="Next slide">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="right">
+          <path d="M9 6L15 12L9 18" />
+        </svg>
+      </button>
     </section>
 
-    <section id="business" class="section-block">
+    <section id="business" class="section">
       <div class="container">
         <div class="section-title center">
+          <span data-i18n="business.kicker">Business Scope</span>
           <h2 data-i18n="business.title">业务范围</h2>
-          <div class="section-underline"></div>
-          <p data-i18n="business.subtitle">Business Scope</p>
+          <p data-i18n="business.desc">我们主营 3C 电子配件、宠物用品、家居生活商品，所有业务以在线渠道为核心展开。</p>
         </div>
-
-        <div class="cards business-cards">
-          <article class="card">
-            <div class="card-icon">⌁</div>
+        <div class="business-grid">
+          <article class="info-card">
+            <div class="card-icon">▣</div>
             <h3 data-i18n="business.card1.title">3C 电子配件</h3>
-            <p data-i18n="business.card1.desc">关注手机、电脑及智能设备相关配件，围绕实用性、设计感和线上消费需求进行商品布局。</p>
+            <p data-i18n="business.card1.desc">关注实用、轻便、适合在线销售的电子周边与数码配件，为日常工作、学习和生活提供便利。</p>
           </article>
-
-          <article class="card">
-            <div class="card-icon">♢</div>
+          <article class="info-card">
+            <div class="card-icon">♧</div>
             <h3 data-i18n="business.card2.title">宠物用品</h3>
-            <p data-i18n="business.card2.desc">关注宠物日常护理、互动、收纳及友好生活方式用品，重视人与宠物的舒适相处体验。</p>
+            <p data-i18n="business.card2.desc">围绕人与宠物的日常陪伴，关注宠物收纳、玩具、护理和生活类用品。</p>
           </article>
-
-          <article class="card">
+          <article class="info-card">
             <div class="card-icon">⌂</div>
             <h3 data-i18n="business.card3.title">家居生活商品</h3>
-            <p data-i18n="business.card3.desc">关注家居收纳、生活便利、装饰与日常使用场景，为线上消费者提供实用且友好的选择。</p>
+            <p data-i18n="business.card3.desc">选择能够提升居家体验的生活用品，重视实用性、舒适感和友好的使用体验。</p>
+          </article>
+          <article class="info-card">
+            <div class="card-icon">↗</div>
+            <h3 data-i18n="business.card4.title">在线业务</h3>
+            <p data-i18n="business.card4.desc">以线上渠道开展产品展示、客户沟通、订单协作和长期合作，持续优化客户体验。</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section-block about-section">
+    <section id="about" class="section alt">
       <div class="container about-grid">
         <div class="about-panel">
-          <span class="small-label">About Us</span>
-          <h2 data-i18n="about.panelTitle">关于我们</h2>
-          <div class="panel-line"></div>
-          <strong data-i18n="about.statement">一家立足新西兰奥克兰的在线贸易公司。</strong>
-          <p data-i18n="about.panelDesc">我们相信，稳定、尊重和互信的合作关系，是公司长期发展的基础。</p>
+          <span data-i18n="about.kicker">About Us</span>
+          <h2 data-i18n="about.panelTitle">一家立足新西兰的在线贸易公司。</h2>
+          <p data-i18n="about.panelDesc">MOCH GLOBAL TRADE LIMITED 关注清晰、可靠和可持续的在线贸易合作，服务本地与全球市场。</p>
         </div>
-
         <div class="about-copy">
-          <p data-i18n="about.p1">MOCH GLOBAL TRADE LIMITED 位于新西兰奥克兰，专注于通过在线业务连接优质商品、供应伙伴与目标市场。</p>
-          <p data-i18n="about.p2">我们的当前主营方向包括 3C 电子配件、宠物用品和家居生活商品。我们重视商品的实用价值、用户体验和长期稳定的合作关系。</p>
-          <p data-i18n="about.p3">作为新西兰公司，我们希望以清晰、可靠和尊重多元文化的方式，与供应商、服务伙伴和客户建立持续合作。</p>
+          <div class="section-title">
+            <span data-i18n="about.kicker2">Who We Are</span>
+            <h2 data-i18n="about.title">关于我们</h2>
+          </div>
+          <p data-i18n="about.p1">MOCH GLOBAL TRADE LIMITED 是一家位于新西兰的在线贸易公司，主营 3C 电子配件、宠物用品与家居生活商品。</p>
+          <p data-i18n="about.p2">我们重视与供应商、线上渠道方、服务伙伴及企业客户建立清晰、稳定和相互尊重的合作关系。</p>
+          <p data-i18n="about.p3">公司以新西兰为业务基础，面向更广阔的国际市场，持续寻找适合线上消费场景的优质商品与合作机会。</p>
         </div>
       </div>
     </section>
 
-    <section id="values" class="section-block values-section">
+    <section id="values" class="section">
       <div class="container">
         <div class="section-title center">
-          <p class="kicker">Our Values</p>
+          <span data-i18n="values.kicker">Our Values</span>
           <h2 data-i18n="values.title">我们的价值观</h2>
-          <div class="section-underline"></div>
+          <p data-i18n="values.desc">我们相信，长期合作建立在公平、互信、多元化和相互尊重之上。</p>
         </div>
-
-        <div class="values-grid">
-          <article class="value-card">
-            <div class="value-icon">✓</div>
-            <h3 data-i18n="values.card1.title">公平</h3>
-            <p data-i18n="values.card1.desc">我们以公平的态度对待每一位客户与合作伙伴，重视清晰和合理的合作规则。</p>
-          </article>
-          <article class="value-card">
-            <div class="value-icon">∞</div>
-            <h3 data-i18n="values.card2.title">互信</h3>
-            <p data-i18n="values.card2.desc">我们相信长期合作来自互相信任、真实沟通和稳定执行。</p>
-          </article>
-          <article class="value-card">
-            <div class="value-icon">◌</div>
-            <h3 data-i18n="values.card3.title">多元化</h3>
-            <p data-i18n="values.card3.desc">我们尊重不同市场、文化、想法和合作方式，欢迎多元背景的伙伴。</p>
-          </article>
-          <article class="value-card">
-            <div class="value-icon">♡</div>
-            <h3 data-i18n="values.card4.title">相互尊重</h3>
-            <p data-i18n="values.card4.desc">我们以尊重作为合作基础，重视坦诚、礼貌和专业的沟通方式。</p>
-          </article>
+        <div class="value-grid">
+          <article class="value-card"><span>⚖</span><h3 data-i18n="values.card1.title">公平</h3><p data-i18n="values.card1.desc">以清晰、合理和负责任的方式对待每一次合作。</p></article>
+          <article class="value-card"><span>♡</span><h3 data-i18n="values.card2.title">互信</h3><p data-i18n="values.card2.desc">通过稳定沟通和可靠执行，建立值得信赖的合作关系。</p></article>
+          <article class="value-card"><span>◎</span><h3 data-i18n="values.card3.title">多元化</h3><p data-i18n="values.card3.desc">尊重不同市场、文化、产品和合作方式带来的可能性。</p></article>
+          <article class="value-card"><span>☁</span><h3 data-i18n="values.card4.title">相互尊重</h3><p data-i18n="values.card4.desc">尊重客户、合作伙伴与团队成员，共同创造长期价值。</p></article>
         </div>
       </div>
     </section>
 
-    <section id="cooperation" class="section-block cooperation-section">
+    <section id="cooperation" class="section alt">
       <div class="container">
         <div class="section-title center">
-          <p class="kicker">Cooperation</p>
-          <h2 data-i18n="coop.title">合作方向</h2>
-          <div class="section-underline"></div>
+          <span data-i18n="coop.kicker">Cooperation</span>
+          <h2 data-i18n="coop.title">合作</h2>
+          <p data-i18n="coop.desc">我们欢迎供应商、线上渠道方、服务伙伴和企业客户与我们建立合作。</p>
         </div>
-
         <div class="cooperation-grid">
-          <article class="step-card">
-            <span class="step-number">1</span>
-            <h3 data-i18n="coop.card1.title">供应商合作</h3>
-            <p data-i18n="coop.card1.desc">欢迎 3C 电子配件、宠物用品与家居类商品供应商建立长期合作。</p>
-          </article>
-          <article class="step-card">
-            <span class="step-number">2</span>
-            <h3 data-i18n="coop.card2.title">服务伙伴合作</h3>
-            <p data-i18n="coop.card2.desc">欢迎产品、设计、运营、物流及相关服务伙伴与我们沟通合作机会。</p>
-          </article>
-          <article class="step-card">
-            <span class="step-number">3</span>
-            <h3 data-i18n="coop.card3.title">线上渠道合作</h3>
-            <p data-i18n="coop.card3.desc">共同探索适合线上消费者的商品、内容和渠道合作方式。</p>
-          </article>
-          <article class="step-card">
-            <span class="step-number">4</span>
-            <h3 data-i18n="coop.card4.title">企业客户合作</h3>
-            <p data-i18n="coop.card4.desc">为有采购、商品合作或在线业务需求的企业客户提供沟通与支持。</p>
-          </article>
+          <article class="step-card"><strong>1</strong><h3 data-i18n="coop.card1.title">供应商合作</h3><p data-i18n="coop.card1.desc">欢迎 3C 电子配件、宠物用品、家居用品相关供应商与我们联系。</p></article>
+          <article class="step-card"><strong>2</strong><h3 data-i18n="coop.card2.title">线上渠道合作</h3><p data-i18n="coop.card2.desc">探索适合不同商品与客户群体的线上销售和展示渠道。</p></article>
+          <article class="step-card"><strong>3</strong><h3 data-i18n="coop.card3.title">服务伙伴合作</h3><p data-i18n="coop.card3.desc">与设计、合规、运营、客户服务等相关伙伴共同提升业务体验。</p></article>
+          <article class="step-card"><strong>4</strong><h3 data-i18n="coop.card4.title">企业客户合作</h3><p data-i18n="coop.card4.desc">为有采购、产品合作或在线业务需求的企业客户提供沟通支持。</p></article>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="contact-section">
-      <div class="container contact-wrap">
+    <section id="contact" class="section contact-section">
+      <div class="container contact-grid">
         <div class="contact-copy">
-          <h2 data-i18n="contact.title">联系我们</h2>
+          <div class="section-title">
+            <span data-i18n="contact.kicker">Contact Us</span>
+            <h2 data-i18n="contact.title">联系我们</h2>
+          </div>
           <p data-i18n="contact.desc">如果你是供应商、服务伙伴、线上渠道方或企业客户，欢迎与我们联系。</p>
-          <a class="button button-light" href="mailto:contact@mochglobaltrade.co.nz" data-i18n="contact.emailBtn">发送邮件</a>
+          <p class="contact-note" data-i18n="contact.note">请选择感兴趣的业务领域，并填写你的问题或需求，提交后将自动生成邮件。</p>
         </div>
-
-        <div class="contact-info-row">
-          <div class="contact-card">
-            <span>Email</span>
-            <strong>contact@mochglobaltrade.co.nz</strong>
-          </div>
-          <div class="contact-card">
-            <span data-i18n="contact.locationLabel">地址</span>
-            <strong data-i18n="contact.locationValue">新西兰奥克兰</strong>
-          </div>
-          <div class="contact-card">
-            <span data-i18n="contact.businessLabel">业务</span>
-            <strong data-i18n="contact.businessValue">3C 电子配件、宠物用品、家居生活商品在线业务</strong>
-          </div>
-        </div>
+        <form class="contact-form" id="contactForm">
+          <fieldset>
+            <legend data-i18n="form.legend">选择您感兴趣的业务领域（可多选）</legend>
+            <div class="checkbox-row">
+              <label><input type="checkbox" name="category" value="3C Electronics" checked><span>▣</span><b data-i18n="form.cat1">3C 电子</b></label>
+              <label><input type="checkbox" name="category" value="Pet Products"><span>♧</span><b data-i18n="form.cat2">宠物</b></label>
+              <label><input type="checkbox" name="category" value="Home Products"><span>⌂</span><b data-i18n="form.cat3">家居用品</b></label>
+            </div>
+          </fieldset>
+          <label class="form-label" for="email" data-i18n="form.email">您的邮箱（可选）</label>
+          <input id="email" name="email" type="email" placeholder="name@example.com" />
+          <label class="form-label" for="message" data-i18n="form.message">请输入您的问题或需求 *</label>
+          <textarea id="message" name="message" required data-i18n-placeholder="form.placeholder" placeholder="请详细描述您的问题或需求，我们会尽快与您联系..."></textarea>
+          <button class="button button-primary" type="submit"><span>✉</span><span data-i18n="form.submit">发送邮件</span></button>
+        </form>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div>
-        <div class="footer-brand">MOCH GLOBAL TRADE LIMITED</div>
-        <p data-i18n="footer.desc">New Zealand based online trade company focused on 3C electronic accessories, pet products and home products.</p>
+      <div class="footer-about">
+        <h3>MOCH GLOBAL TRADE LIMITED</h3>
+        <p data-i18n="footer.desc">一家立足新西兰的在线贸易公司，主营 3C 电子配件、宠物用品与家居生活商品。</p>
       </div>
-      <div>
-        <h3 data-i18n="footer.social">社交账号</h3>
+      <div class="footer-values">
+        <h4 data-i18n="footer.values">我们的价值观</h4>
+        <ul>
+          <li data-i18n="footer.v1">公平</li>
+          <li data-i18n="footer.v2">互信</li>
+          <li data-i18n="footer.v3">多元化</li>
+          <li data-i18n="footer.v4">相互尊重</li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4 data-i18n="footer.social">社交账号</h4>
         <div class="social-links">
-          <a href="#" aria-label="Facebook">Facebook</a>
-          <a href="#" aria-label="Instagram">Instagram</a>
-          <a href="#" aria-label="TikTok">TikTok</a>
+          <a href="#" aria-label="Facebook"><span class="social-icon facebook">f</span><span class="social-text">Facebook</span></a>
+          <a href="#" aria-label="Instagram"><span class="social-icon instagram">◎</span><span class="social-text">Instagram</span></a>
+          <a href="#" aria-label="TikTok"><span class="social-icon tiktok">♪</span><span class="social-text">TikTok</span></a>
         </div>
       </div>
-      <div>
-        <h3 data-i18n="footer.contact">联系信息</h3>
+      <div class="footer-contact">
+        <h4 data-i18n="footer.contact">联系信息</h4>
         <p>contact@mochglobaltrade.co.nz</p>
-        <p data-i18n="footer.address">Auckland, New Zealand</p>
+        <p data-i18n="footer.address">新西兰奥克兰</p>
       </div>
     </div>
     <div class="container footer-bottom">
-      <span>© 2026 MOCH GLOBAL TRADE LIMITED. All rights reserved.</span>
-      <span data-i18n="footer.right">Built on fairness, mutual trust, diversity and respect.</span>
+      <p>© 2026 MOCH GLOBAL TRADE LIMITED. All rights reserved.</p>
     </div>
   </footer>
 
