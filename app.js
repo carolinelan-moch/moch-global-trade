@@ -395,8 +395,11 @@ mainNav.querySelectorAll("a").forEach((anchor) => {
     });
 });
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
     event.preventDefault();
+
+    const submitBtn = form.querySelector("button[type='submit']");
+    const originalText = submitBtn.textContent;
 
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
@@ -412,16 +415,57 @@ form.addEventListener("submit", (event) => {
             : `Website Enquiry - ${categories.join(" / ") || "General Enquiry"}`;
 
     const body = [
-        `Categories: ${categories.join(", ")}`,
-        `Visitor Email: ${email || "Not provided"}`,
+        `Categories: ${categories.join(", ") || "General Enquiry"}`,
+        `Visitor Email: ${email}`,
         "",
         "Message:",
         message
     ].join("\n");
 
-    window.location.href = `mailto:contact@mochglobal.com?subject=${encodeURIComponent(
-        subject
-    )}&body=${encodeURIComponent(body)}`;
+    const formData = new FormData();
+
+    formData.append("access_key", "ee8eac14-7664-422b-9cfe-48b966088b38");
+    formData.append("subject", subject);
+    formData.append("from_name", "MOCH Global Website");
+    formData.append("email", email || "not-provided@mochglobal.com");
+    formData.append("message", body);
+
+    submitBtn.textContent = currentLang === "zh" ? "发送中..." : "Sending...";
+    submitBtn.disabled = true;
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+            alert(
+                currentLang === "zh"
+                    ? "邮件已发送，谢谢您的咨询。"
+                    : "Success! Your message has been sent."
+            );
+
+            form.reset();
+        } else {
+            alert(
+                currentLang === "zh"
+                    ? `发送失败：${data.message || "请稍后再试。"}`
+                    : `Error: ${data.message || "Please try again later."}`
+            );
+        }
+    } catch (error) {
+        alert(
+            currentLang === "zh"
+                ? "网络错误，请稍后再试。"
+                : "Something went wrong. Please try again."
+        );
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
 });
 
 detectPreferredLanguage().then((language) => {
