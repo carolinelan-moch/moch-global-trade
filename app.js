@@ -419,7 +419,7 @@ form.addEventListener("submit", (event) => {
         message
     ].join("\n");
 
-    window.location.href = `mailto:contact@mochglobaltrade.co.nz?subject=${encodeURIComponent(
+    window.location.href = `mailto:contact@mochglobal.com?subject=${encodeURIComponent(
         subject
     )}&body=${encodeURIComponent(body)}`;
 });
