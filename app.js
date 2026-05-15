@@ -395,78 +395,87 @@ mainNav.querySelectorAll("a").forEach((anchor) => {
     });
 });
 
-form.addEventListener("submit", async (event) => {
-    event.preventDefault();
+if (form) {
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-    const submitBtn = form.querySelector("button[type='submit']");
-    const originalText = submitBtn.textContent;
+        const submitBtn = form.querySelector("button[type='submit']");
+        const originalText = submitBtn.textContent;
 
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-    const categories = [...form.querySelectorAll("input[name='category']:checked")]
-        .map((category) =>
-            category.parentElement.querySelector("b").textContent.trim()
-        );
-
-    const subject =
-        currentLang === "zh"
-            ? `网站咨询 - ${categories.join(" / ") || "一般咨询"}`
-            : `Website Enquiry - ${categories.join(" / ") || "General Enquiry"}`;
-
-    const body = [
-        `Categories: ${categories.join(", ") || "General Enquiry"}`,
-        `Visitor Email: ${email}`,
-        "",
-        "Message:",
-        message
-    ].join("\n");
-
-    const formData = new FormData();
-
-    formData.append("access_key", "ee8eac14-7664-422b-9cfe-48b966088b38");
-    formData.append("subject", subject);
-    formData.append("from_name", "MOCH Global Website");
-    formData.append("email", email || "not-provided@mochglobal.com");
-    formData.append("message", body);
-
-    submitBtn.textContent = currentLang === "zh" ? "发送中..." : "Sending...";
-    submitBtn.disabled = true;
-
-    try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
-
-        const data = await response.json();
-
-        if (response.ok && data.success) {
-            alert(
-                currentLang === "zh"
-                    ? "邮件已发送，谢谢您的咨询。"
-                    : "Success! Your message has been sent."
+        const categories = [...form.querySelectorAll("input[name='category']:checked")]
+            .map((category) =>
+                category.parentElement.querySelector("b").textContent.trim()
             );
 
-            form.reset();
-        } else {
-            alert(
-                currentLang === "zh"
-                    ? `发送失败：${data.message || "请稍后再试。"}`
-                    : `Error: ${data.message || "Please try again later."}`
-            );
-        }
-    } catch (error) {
-        alert(
+        const subject =
             currentLang === "zh"
-                ? "网络错误，请稍后再试。"
-                : "Something went wrong. Please try again."
-        );
-    } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }
-});
+                ? `网站咨询 - ${categories.join(" / ") || "一般咨询"}`
+                : `Website Enquiry - ${categories.join(" / ") || "General Enquiry"}`;
+
+        const body = [
+            `Categories: ${categories.join(", ") || "General Enquiry"}`,
+            `Visitor Email: ${email}`,
+            "",
+            "Message:",
+            message
+        ].join("\n");
+
+        const formData = new FormData();
+
+        formData.append("access_key", "ee8eac14-7664-422b-9cfe-48b966088b38");
+        formData.append("subject", subject);
+        formData.append("from_name", "MOCH Global Website");
+        formData.append("email", email);
+        formData.append("message", body);
+
+        submitBtn.textContent = currentLang === "zh" ? "发送中..." : "Sending...";
+        submitBtn.disabled = true;
+        submitBtn.classList.remove("submit-success", "submit-error");
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (response.ok && data.success) {
+                submitBtn.textContent = currentLang === "zh" ? "发送成功 ✓" : "Sent successfully ✓";
+                submitBtn.classList.add("submit-success");
+
+                form.reset();
+
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.classList.remove("submit-success");
+                    submitBtn.disabled = false;
+                }, 2200);
+            } else {
+                submitBtn.textContent = currentLang === "zh" ? "发送失败" : "Failed to send";
+                submitBtn.classList.add("submit-error");
+
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.classList.remove("submit-error");
+                    submitBtn.disabled = false;
+                }, 2500);
+            }
+        } catch (error) {
+            submitBtn.textContent = currentLang === "zh" ? "网络错误" : "Network error";
+            submitBtn.classList.add("submit-error");
+
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.classList.remove("submit-error");
+                submitBtn.disabled = false;
+            }, 2500);
+        }
+    });
+}
 
 detectPreferredLanguage().then((language) => {
     setLang(language);

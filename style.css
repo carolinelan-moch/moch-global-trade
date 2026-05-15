@@ -554,6 +554,25 @@ textarea:focus {
     margin-top: 14px
 }
 
+button[type="submit"] {
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+button[type="submit"]:disabled {
+    cursor: not-allowed;
+    opacity: 0.85;
+}
+
+button[type="submit"].submit-success {
+    background-color: #16a34a;
+    color: #ffffff;
+}
+
+button[type="submit"].submit-error {
+    background-color: #dc2626;
+    color: #ffffff;
+}
+
 .site-footer {
     background: linear-gradient(135deg, #071d3d, #082448);
     color: #d9e9ff;
