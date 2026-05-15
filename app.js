@@ -332,7 +332,7 @@ function prevSlide() {
 
 function restartTimer() {
     clearInterval(timer);
-    timer = setInterval(nextSlide, 5000);
+    timer = setInterval(nextSlide, 30000);
 }
 
 function setLang(lang) {
