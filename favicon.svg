@@ -1,0 +1,11 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="16" fill="url(#moch-favicon-gradient)"/>
+  <path d="M14 46V18h10l8 13 8-13h10v28h-8V31L34.5 43h-5L22 31v15h-8Z" fill="#fff"/>
+  <path d="M51 17c5 6 5 24 0 30" stroke="#D8E8FF" stroke-width="3" stroke-linecap="round" opacity=".78"/>
+  <defs>
+    <linearGradient id="moch-favicon-gradient" x1="4" y1="4" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B4DB8"/>
+      <stop offset="1" stop-color="#246BFE"/>
+    </linearGradient>
+  </defs>
+</svg>
