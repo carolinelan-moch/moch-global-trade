@@ -563,14 +563,16 @@ button[type="submit"]:disabled {
     opacity: 0.85;
 }
 
-button[type="submit"].submit-success {
-    background-color: #16a34a;
+button[type="submit"].button-primary.submit-success {
+    background: linear-gradient(135deg, #16a34a, #22c55e);
     color: #ffffff;
+    box-shadow: 0 14px 30px rgba(22, 163, 74, .22);
 }
 
-button[type="submit"].submit-error {
-    background-color: #dc2626;
+button[type="submit"].button-primary.submit-error {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
     color: #ffffff;
+    box-shadow: 0 14px 30px rgba(220, 38, 38, .22);
 }
 
 .site-footer {
