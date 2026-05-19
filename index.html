@@ -162,6 +162,7 @@
           <input id="email" name="email" type="email" placeholder="name@example.com" required/>
           <label class="form-label" for="message" data-i18n="form.message">请输入您的问题或需求 *</label>
           <textarea id="message" name="message" required data-i18n-placeholder="form.placeholder" placeholder="请详细描述您的问题或需求，我们会尽快与您联系..."></textarea>
+          <input type="text" name="botcheck" tabindex="-1" autocomplete="off" style="display:none;">
           <button class="button button-primary" type="submit"><span>✉</span><span data-i18n="form.submit">发送邮件</span></button>
         </form>
       </div>
@@ -193,7 +194,6 @@
       </div>
       <div class="footer-contact">
         <h4 data-i18n="footer.contact">联系信息</h4>
-        <p>contact@mochglobal.com</p>
         <p data-i18n="footer.address">新西兰奥克兰</p>
       </div>
     </div>
